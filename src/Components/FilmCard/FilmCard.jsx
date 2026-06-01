@@ -1,4 +1,6 @@
-function FilmCard({nome,ano,diretor,imagem}) {
+import "./FilmCard.css" ;
+
+function FilmCard({nome,ano,diretor,imagem,link}) {
 
   return (
     <div className="FilmCard">
@@ -10,6 +12,9 @@ function FilmCard({nome,ano,diretor,imagem}) {
       <p>Ano: {ano}</p>
 
       <p>Diretor: {diretor}</p>
+
+      <a href={link} target="_blank" rel="noopener noreferrer" className="btn-assistir"> 
+        Onde assistir </a>
 
     </div>
   )

@@ -14,30 +14,35 @@ function App() {
       ano: 2014,
       diretor: "Christopher Nolan",
       imagem: interestellar,
+      link: "https://www.justwatch.com/br/filme/interestelar" ,
     },
     {
       nome: "Duna",
       ano: 2021,
       diretor: "Denis Villeneuve",
       imagem: duna,
+      link: "https://www.justwatch.com/br/filme/dune" ,
     },
     {
       nome: "Blade Runner 2049",
       ano: 2017,
       diretor: "Denis Villeneuve",
       imagem: bladerunner,
+      link: "https://www.justwatch.com/br/filme/blade-runner-2049" ,
     },
     {
       nome: "2001: Uma Odisséia no Espaço",
       ano: 1968,
       diretor: "Stanley Kubrick",
       imagem: odisseianoespaco,
+      link: "https://www.justwatch.com/br/filme/2001-uma-odisseia-no-espaco" ,
     },
     {
       nome: "Devoradores de Estrelas",
       ano: 2026,
       diretor: "Phil Lord e Christopher Miller",
       imagem: devoradoresdeestrelas,
+      link: "https://www.primevideo.com/-/pt/detail/0J0SQMKFG51K9S3UTU9SDEMT7D/" ,
     },
   ]);
 
@@ -58,6 +63,7 @@ function App() {
             ano={filme.ano}
             diretor={filme.diretor}
             imagem={filme.imagem}
+            link={filme.link}
           />
         ))}
       </section>
