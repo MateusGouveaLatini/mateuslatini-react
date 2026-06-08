@@ -1,11 +1,15 @@
-import "./FilmCard.css" ;
+import "./FilmCard.css";
+import { Link } from "react-router-dom";
 
-function FilmCard({nome,ano,diretor,imagem,link}) {
-
+function FilmCard({ id, nome, ano, diretor, imagem, mostrarBotao = true }) {
   return (
     <div className="FilmCard">
-
-      <img src={imagem} width={200} height={250} alt={nome} title={nome}/>
+      <img
+        src={imagem}
+        width={200}
+        height={250}
+        alt={nome}
+      />
 
       <h2>{nome}</h2>
 
@@ -13,11 +17,15 @@ function FilmCard({nome,ano,diretor,imagem,link}) {
 
       <p>Diretor: {diretor}</p>
 
-      <a href={link} target="_blank" rel="noopener noreferrer" className="btn-assistir"> 
-        Onde assistir </a>
-
-    </div>
-  )
+       {mostrarBotao && (
+      <Link
+        to={`/mateuslatini-react/${id}`}
+        className="btn-assistir"
+      >
+        Ver detalhes
+      </Link>
+    )}
+  </div>
+);
 }
-
-export default FilmCard
+export default FilmCard;
